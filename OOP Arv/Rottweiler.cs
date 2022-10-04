@@ -29,12 +29,12 @@ namespace OOP_Arv
             if (isGuardDog == true && aggressiveness > 5)
             {
                 Random rnd = new Random();
-                chanceOfSuccess = rnd.Next(1, 61); // chance of success 83 %
+                chanceOfSuccess = rnd.Next(1, 41); // chance of success 75 %
             }
             else if (isGuardDog == true && aggressiveness <= 5)
             {
                 Random rnd = new Random();
-                chanceOfSuccess = rnd.Next(1, 41); // chance of success 75 %
+                chanceOfSuccess = rnd.Next(1, 31); // chance of success 66 %
             }
             else if (isGuardDog == false && aggressiveness > 5)
             {
@@ -60,8 +60,6 @@ namespace OOP_Arv
                 Console.WriteLine(name + " thought that the burglars looked friendly and started wagging its tail.");
                 Console.WriteLine("The burglars sat down and gently petted " + name + " and then stole your tv, laptop, phone, money and a photo of your 93 year old grandma while " + name + " happily watched the burglars from afar.");
             }
-
-            Console.WriteLine(chanceOfSuccess);
         }
 
         public override void PetAnimal()
