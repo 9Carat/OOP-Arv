@@ -8,7 +8,7 @@ namespace OOP_Arv
 {
     internal class Dog : Animal
     {
-        public bool isGuardDog;
+        public bool isGuardDog = true;
 
         public Dog(string name, int legs, string eyeColor, int age, string size, string personality, bool isGuardDog) : base(name, legs, eyeColor, age, size, personality)
         {
@@ -40,7 +40,7 @@ namespace OOP_Arv
             }
         }
 
-        public void Fetch()
+        public virtual void Fetch()
         {
             Console.WriteLine("You throw the ball.");
             Console.WriteLine("The dog brings the ball back!");

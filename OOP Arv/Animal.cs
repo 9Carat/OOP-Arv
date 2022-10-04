@@ -8,12 +8,12 @@ namespace OOP_Arv
 {
     internal class Animal
     {
-        public string name;
-        public int legs;
-        public string eyeColor;
-        public int age;
-        public string size;
-        public string personality;
+        public string name = "Fido";
+        public int legs = 4;
+        public string eyeColor = "Blue";
+        public int age = 5;
+        public string size = "Average";
+        public string personality = "Obedient"; // Obedient, shy, friendly, angry
 
         public Animal(string name, int legs, string eyeColor, int age, string size, string personality)
         {
@@ -30,27 +30,29 @@ namespace OOP_Arv
             Console.WriteLine("The animal says: ");
         }
 
-        public virtual void CallAnimal(string personality)
+        public virtual void CallAnimal()
         {
-            if (personality == "Obedient")
+            Console.WriteLine("You call for " + name);
+
+            if (personality == "Obedient" || personality == "Friendly")
             {
-                Console.WriteLine("The animal comes running to you");
+                Console.WriteLine(name + " comes running to you");
             }
             else
             {
-                Console.WriteLine("The animal ignores you");
+                Console.WriteLine(name + " ignores you");
             }
         }
 
-        public virtual void PetAnimal(string personality)
+        public virtual void PetAnimal()
         {
             if (personality == "Shy")
             {
-                Console.WriteLine("The animal runs away");
+                Console.WriteLine(name + " runs away");
             }
             else
             {
-                Console.WriteLine("The animal looks happy");
+                Console.WriteLine(name + " looks happy");
             }
         }
     }

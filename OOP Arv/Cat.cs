@@ -8,7 +8,7 @@ namespace OOP_Arv
 {
     internal class Cat : Animal
     {
-        public string fur;
+        public string fur = "Short";
 
         public Cat(string name, int legs, string eyeColor, int age, string size, string personality, string fur) : base(name, legs, eyeColor, age, size, personality)
         {
@@ -17,12 +17,31 @@ namespace OOP_Arv
 
         public void Hunt()
         {
-            Console.WriteLine("The cat comes back with a: "); // Slumpad händelse (switch?)
+            Console.WriteLine(name + " goes away on a hunt");
+
+            Random rnd = new Random();
+            int selection = rnd.Next(1, 5);
+
+            switch (selection)
+            {
+                case 1:
+                    Console.WriteLine(name + " comes back with a dead mouse!");
+                    break;
+                case 2:
+                    Console.WriteLine(name + " comes back with a mouse that is still alive!");
+                    break;
+                case 3:
+                    Console.WriteLine(name + " comes back with a leaf!");
+                    break;
+                case 4:
+                    Console.WriteLine(name + " comes back with a stick!");
+                    break;
+            }
         }
 
         public override void MakeSound()
         {
-            Console.WriteLine("The cat says: Mjau!");
+            Console.WriteLine(name + ", the cat says: Mjau!");
         }
     }
 }
