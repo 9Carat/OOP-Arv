@@ -40,10 +40,10 @@ namespace OOP_Arv
             }
         }
 
-        public virtual void Fetch()
+        public void Fetch()
         {
-            Console.WriteLine("You throw the ball.");
-            Console.WriteLine("The dog brings the ball back!");
+            Console.WriteLine("You throw the ball as far as you can.");
+            Console.WriteLine(name + " comes back with the ball!");
         }
 
         public override void MakeSound()

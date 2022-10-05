@@ -41,7 +41,7 @@ namespace OOP_Arv
 
         public override void MakeSound()
         {
-            Console.WriteLine(name + ", the cat says: Mjau!");
+            Console.WriteLine(name + " the cat says: Mjau!");
         }
     }
 }

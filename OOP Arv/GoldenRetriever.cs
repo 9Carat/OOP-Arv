@@ -62,12 +62,6 @@ namespace OOP_Arv
             }
         }
 
-        public override void Fetch()
-        {
-            Console.WriteLine("You throw the ball.");
-            Console.WriteLine(name + " happily brings the ball back!");
-        }
-
         public void DogPark()
         {
             Console.WriteLine("You take " + name + " to the local dog park.");

@@ -30,7 +30,7 @@ namespace OOP_Arv
             Console.WriteLine("The animal says: ");
         }
 
-        public virtual void CallAnimal()
+        public void CallAnimal()
         {
             Console.WriteLine("You call for " + name);
 
@@ -44,8 +44,10 @@ namespace OOP_Arv
             }
         }
 
-        public virtual void PetAnimal()
+        public void PetAnimal()
         {
+            Console.WriteLine("You crouch down and gently pet " + name);
+
             if (personality == "Shy")
             {
                 Console.WriteLine(name + " runs away");

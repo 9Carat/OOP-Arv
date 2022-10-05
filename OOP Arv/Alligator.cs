@@ -17,7 +17,7 @@ namespace OOP_Arv
 
         public override void MakeSound()
         {
-            Console.WriteLine(name + ", the alligator says: Rrrrrrrr!");
+            Console.WriteLine(name + " the alligator says: Rrrrrrrr!");
         }
 
         public void Action()

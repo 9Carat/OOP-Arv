@@ -12,6 +12,7 @@
             alligator1.MakeSound();
             alligator1.Action();
             cat1.MakeSound();
+            cat1.CallAnimal();
             cat1.Hunt();
             rottweiler1.MakeSound();
             rottweiler1.CallAnimal();
@@ -20,6 +21,7 @@
             goldenRetriever1.MakeSound();
             goldenRetriever1.PetAnimal();
             goldenRetriever1.DogPark();
+            goldenRetriever1.Fetch();
 
             Console.ReadLine();
         }

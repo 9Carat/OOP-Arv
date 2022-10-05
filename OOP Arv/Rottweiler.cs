@@ -62,18 +62,6 @@ namespace OOP_Arv
             }
         }
 
-        public override void PetAnimal()
-        {
-            if (personality == "Shy")
-            {
-                Console.WriteLine(name + " runs away");
-            }
-            else
-            {
-                Console.WriteLine(name + " looks happy");
-            }
-        }
-
         public void ThrowBaconAtDog()
         {
             Console.WriteLine("You throw a piece of bacon towards " + name + ".");
