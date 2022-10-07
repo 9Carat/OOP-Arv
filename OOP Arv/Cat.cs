@@ -8,7 +8,7 @@ namespace OOP_Arv
 {
     internal class Cat : Animal
     {
-        public string fur = "Short";
+        protected string fur = "Short";
 
         public Cat(string name, int legs, string eyeColor, int age, string size, string personality, string fur) : base(name, legs, eyeColor, age, size, personality)
         {

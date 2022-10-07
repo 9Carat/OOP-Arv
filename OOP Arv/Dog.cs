@@ -8,7 +8,7 @@ namespace OOP_Arv
 {
     internal class Dog : Animal
     {
-        public bool isGuardDog = true;
+        protected bool isGuardDog = true;
 
         public Dog(string name, int legs, string eyeColor, int age, string size, string personality, bool isGuardDog) : base(name, legs, eyeColor, age, size, personality)
         {

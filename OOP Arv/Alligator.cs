@@ -8,7 +8,7 @@ namespace OOP_Arv
 {
     internal class Alligator : Animal
     {
-        public int teeths = 80;
+        protected int teeths = 80;
 
         public Alligator(string name, int legs, string eyeColor, int age, string size, string personality, int teeths) : base(name, legs, eyeColor, age, size, personality)
         {

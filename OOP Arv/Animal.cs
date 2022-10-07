@@ -8,12 +8,28 @@ namespace OOP_Arv
 {
     internal class Animal
     {
-        public string name = "Fido";
-        public int legs = 4;
-        public string eyeColor = "Blue";
-        public int age = 5;
-        public string size = "Average";
-        public string personality = "Obedient"; // Obedient, shy, friendly, angry
+        protected string name = "Fido";
+        protected int legs = 4;
+        protected string eyeColor = "Blue";
+        protected int age = 5;
+        protected string size = "Average";
+        protected string personality = "Obedient"; // Obedient, shy, friendly, angry
+
+        public string Personality 
+        { 
+            get { return personality; } 
+            set
+            {
+                if (personality != "Obedient" || personality != "Shy" || personality != "Friendly" || personality != "Angry")
+                {
+                    personality = "Unknown";
+                }
+                else
+                {
+                    personality = Personality;
+                }
+            } 
+        }
 
         public Animal(string name, int legs, string eyeColor, int age, string size, string personality)
         {

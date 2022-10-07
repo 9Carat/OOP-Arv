@@ -8,8 +8,8 @@ namespace OOP_Arv
 {
     internal class GoldenRetriever : Dog
     {
-        public int aggressiveness = 2;
-        public bool adopted = true;
+        protected int aggressiveness = 2;
+        protected bool adopted = true;
 
         public GoldenRetriever(string name, int legs, string eyeColor, int age, string size, string personality, bool isGuardDog, int aggressiveness, bool adopted) : base(name, legs, eyeColor, age, size, personality, isGuardDog)
         {

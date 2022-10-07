@@ -8,8 +8,8 @@ namespace OOP_Arv
 {
     internal class Rottweiler : Dog
     {
-        public int aggressiveness = 7; // 1-10
-        public int hunger = 3; // 1-10
+        protected int aggressiveness = 7; // 1-10
+        protected int hunger = 3; // 1-10
 
         public Rottweiler(string name, int legs, string eyeColor, int age, string size, string personality, bool isGuardDog, int aggressiveness, int hunger) : base(name, legs, eyeColor, age, size, personality, isGuardDog)
         {
