@@ -8,11 +8,28 @@ namespace OOP_Arv
 {
     internal class Cat : Animal
     {
-        protected string fur = "Short";
+        protected string fur;
 
+        // Constructor for all attributes
         public Cat(string name, int legs, string eyeColor, int age, string size, string personality, string fur) : base(name, legs, eyeColor, age, size, personality)
         {
             this.fur = fur;
+        }
+
+        // Constructor for relevant attributes only
+        public Cat(string name, string personality, string fur)
+        {
+            this.name = name;
+            this.Personality = personality;
+            this.fur = fur;
+        }
+
+        // Constructor with default attributes
+        public Cat()
+        {
+            this.name = "Fido";
+            this.Personality = "Obedient";
+            this.fur = "Short";
         }
 
         public void Hunt()

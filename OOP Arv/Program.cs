@@ -11,6 +11,7 @@
 
             alligator1.MakeSound();
             alligator1.Action();
+            alligator1.CheckTeeths();
             cat1.MakeSound();
             cat1.CallAnimal();
             cat1.Hunt();

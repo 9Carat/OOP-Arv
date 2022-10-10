@@ -8,35 +8,53 @@ namespace OOP_Arv
 {
     internal class Dog : Animal
     {
-        protected bool isGuardDog = true;
+        protected bool isGuardDog;
 
-        public Dog(string name, int legs, string eyeColor, int age, string size, string personality, bool isGuardDog) : base(name, legs, eyeColor, age, size, personality)
+        // Constructor for all attributes
+        public Dog(string name, int legs, string eyeColor, int age, string size, string personality, bool isGuardDog) : base(name, legs, eyeColor, age, size, personality) 
         {
             this.isGuardDog = isGuardDog;
         }
 
+        // Constructor for relevant attributes only
+        public Dog(string name, string personality, bool isGuardDog) 
+        {
+            this.name = name;
+            this.Personality = personality;
+            this.isGuardDog = isGuardDog;
+        }
+
+        // Constructor with default attributes
+        public Dog() 
+        {
+            this.name = "Fido";
+            this.Personality = "Obedient";
+            this.isGuardDog = false;
+        }
+
         public virtual void GuardHouse()
         {
-            Random rnd = new Random();
-            int num = rnd.Next(1, 11);
-            bool success;
+            int num;
 
-            if (num <= 5)
+            if (isGuardDog)
             {
-                success = false;
+                Random rnd = new Random();
+                num = rnd.Next(1, 26); // Chance of success = 80 %
+            } else
+            {
+                Random rnd = new Random();
+                num = rnd.Next(1, 11); // Chance of success = 50 %
+            }
+
+            if (num >= 5)
+            {
+                Console.WriteLine("You tell " + name + " to guard your house.");
+                Console.WriteLine(name + " will guard your house against intruders.");
             }
             else
             {
-                success = true;
-            }
-
-            if (success == true)
-            {
-                Console.WriteLine("The dog will guard your house against intruders"); // Slumpad händelse (switch?)
-            }
-            else
-            {
-                Console.WriteLine("The dog does not understand you");
+                Console.WriteLine("You tell " + name + " to guard your house");
+                Console.WriteLine(name + " does not understand you but smiles anyway.");
             }
         }
 
@@ -48,7 +66,7 @@ namespace OOP_Arv
 
         public override void MakeSound()
         {
-            Console.WriteLine("The dog says: Woff!");
+            Console.WriteLine(name + " says: Woff!");
         }
     }
 }

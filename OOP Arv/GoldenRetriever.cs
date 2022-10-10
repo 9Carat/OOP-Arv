@@ -8,13 +8,30 @@ namespace OOP_Arv
 {
     internal class GoldenRetriever : Dog
     {
-        protected int aggressiveness = 2;
-        protected bool adopted = true;
+        protected int aggressiveness;
+        protected bool adopted;
 
+        // Constructor for all attributes
         public GoldenRetriever(string name, int legs, string eyeColor, int age, string size, string personality, bool isGuardDog, int aggressiveness, bool adopted) : base(name, legs, eyeColor, age, size, personality, isGuardDog)
         {
             this.aggressiveness = aggressiveness;
             this.adopted = adopted;
+        }
+        // Constructor for relevant attributes only
+        public GoldenRetriever(string name, string personality, bool isGuardDog, int aggressiveness)
+        {
+            this.name = name;
+            this.Personality = personality;
+            this.isGuardDog = isGuardDog;
+            this.aggressiveness = aggressiveness;
+        }
+        // Constructor with default attributes
+        public GoldenRetriever()
+        {
+            this.name = "Fido";
+            this.Personality = "Obedient";
+            this.isGuardDog = false;
+            this.aggressiveness = 3;
         }
 
         public override void MakeSound()
@@ -49,7 +66,7 @@ namespace OOP_Arv
 
             if (chanceOfSuccess > 10)
             {
-                Console.WriteLine("You tell " + name + " to guard your house against intruders");
+                Console.WriteLine("You tell " + name + " to guard your house against intruders.");
                 Console.WriteLine("During the following night, a couple of burglars tried to break into your house...");
                 Console.WriteLine("The burglary attemp was unsuccesful as your dog, " + name + ", managed to scare the burglars away!");
             }

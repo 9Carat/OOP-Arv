@@ -8,13 +8,32 @@ namespace OOP_Arv
 {
     internal class Rottweiler : Dog
     {
-        protected int aggressiveness = 7; // 1-10
-        protected int hunger = 3; // 1-10
+        protected int aggressiveness; // 1-10
+        protected int hunger; // 1-10
 
+        // Constructor for all attributes
         public Rottweiler(string name, int legs, string eyeColor, int age, string size, string personality, bool isGuardDog, int aggressiveness, int hunger) : base(name, legs, eyeColor, age, size, personality, isGuardDog)
         {
             this.aggressiveness = aggressiveness;
             this.hunger = hunger;
+        }
+
+        // Constructor for relevant attributes only
+        public Rottweiler(string name, string personality, bool isGuardDog, int aggressiveness)
+        {
+            this.name = name;
+            this.Personality = personality;
+            this.isGuardDog = isGuardDog;
+            this.aggressiveness = aggressiveness;
+        }
+
+        // Constructor with default attributes
+        public Rottweiler()
+        {
+            this.name = "Fido";
+            this.Personality = "Obedient";
+            this.isGuardDog = true;
+            this.aggressiveness = 7;
         }
 
         public override void MakeSound()
