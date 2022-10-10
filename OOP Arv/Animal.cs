@@ -39,7 +39,7 @@ namespace OOP_Arv
             this.eyeColor = eyeColor;
             this.age = age;
             this.size = size;
-            this.personality = personality;
+            this.Personality = personality;
         }
 
         // Constructor with default attributes
@@ -50,7 +50,7 @@ namespace OOP_Arv
             this.eyeColor = "Blue";
             this.age = 5;
             this.size = "Average";
-            this.personality = "Obedient";
+            this.Personality = "Obedient";
     }
 
         public virtual void MakeSound()
