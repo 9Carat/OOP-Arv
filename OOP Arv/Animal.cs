@@ -8,29 +8,30 @@ namespace OOP_Arv
 {
     internal class Animal
     {
-        protected string name = "Fido";
-        protected int legs = 4;
-        protected string eyeColor = "Blue";
-        protected int age = 5;
-        protected string size = "Average";
-        protected string personality = "Obedient"; // Obedient, shy, friendly, angry
+        protected string name;
+        protected int legs;
+        protected string eyeColor;
+        protected int age;
+        protected string size;
+        protected string personality; // Obedient, shy, friendly, angry
 
         public string Personality 
         { 
             get { return personality; } 
             set
             {
-                if (personality != "Obedient" || personality != "Shy" || personality != "Friendly" || personality != "Angry")
+                if (value != "Obedient" || value != "Shy" || value != "Friendly" || value  != "Angry")
                 {
                     personality = "Unknown";
                 }
                 else
                 {
-                    personality = Personality;
+                    personality = value;
                 }
             } 
         }
 
+        // Constructor for all attributes
         public Animal(string name, int legs, string eyeColor, int age, string size, string personality)
         {
             this.name = name;
@@ -40,6 +41,17 @@ namespace OOP_Arv
             this.size = size;
             this.personality = personality;
         }
+
+        // Constructor with default attributes
+        public Animal()
+        {
+            this.name = "Fido";
+            this.legs = 4;
+            this.eyeColor = "Blue";
+            this.age = 5;
+            this.size = "Average";
+            this.personality = "Obedient";
+    }
 
         public virtual void MakeSound()
         {
@@ -52,11 +64,11 @@ namespace OOP_Arv
 
             if (personality == "Obedient" || personality == "Friendly")
             {
-                Console.WriteLine(name + " comes running to you");
+                Console.WriteLine(name + " comes running to you.");
             }
             else
             {
-                Console.WriteLine(name + " ignores you");
+                Console.WriteLine(name + " ignores you.");
             }
         }
 

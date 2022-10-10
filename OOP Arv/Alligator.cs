@@ -8,11 +8,28 @@ namespace OOP_Arv
 {
     internal class Alligator : Animal
     {
-        protected int teeths = 80;
+        protected int teeths;
 
+        // Constructor for all attributes
         public Alligator(string name, int legs, string eyeColor, int age, string size, string personality, int teeths) : base(name, legs, eyeColor, age, size, personality)
         {
             this.teeths = teeths;
+        }
+
+        // Constructor for relevant attributes only
+        public Alligator(string name, string personality, int teeths)
+        {
+            this.name = name;
+            this.Personality = personality;
+            this.teeths = teeths;
+        }
+
+        // Constructor with default attributes
+        public Alligator()
+        {
+            this.name = "Fido";
+            this.Personality = "Obedient";
+            this.teeths = 80;
         }
 
         public override void MakeSound()
@@ -37,6 +54,12 @@ namespace OOP_Arv
                     Console.WriteLine(name + " is hunting for food.");
                     break;
             }
+        }
+
+        public void CheckTeeths()
+        {
+            Console.WriteLine("You decide to inspect " + name + "s teeths.");
+            Console.WriteLine(name + " has " + teeths + " teeths and they look pretty sharp!");
         }
     }
 }
