@@ -27,8 +27,6 @@ namespace OOP_Arv
         // Constructor with default attributes
         public Alligator()
         {
-            this.name = "Fido";
-            this.Personality = "Obedient";
             this.teeths = 80;
         }
 

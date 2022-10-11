@@ -28,9 +28,6 @@ namespace OOP_Arv
         // Constructor with default attributes
         public GoldenRetriever()
         {
-            this.name = "Fido";
-            this.Personality = "Obedient";
-            this.isGuardDog = false;
             this.aggressiveness = 3;
         }
 

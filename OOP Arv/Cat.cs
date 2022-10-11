@@ -27,8 +27,6 @@ namespace OOP_Arv
         // Constructor with default attributes
         public Cat()
         {
-            this.name = "Fido";
-            this.Personality = "Obedient";
             this.fur = "Short";
         }
 

@@ -27,8 +27,6 @@ namespace OOP_Arv
         // Constructor with default attributes
         public Dog() 
         {
-            this.name = "Fido";
-            this.Personality = "Obedient";
             this.isGuardDog = false;
         }
 

@@ -30,9 +30,6 @@ namespace OOP_Arv
         // Constructor with default attributes
         public Rottweiler()
         {
-            this.name = "Fido";
-            this.Personality = "Obedient";
-            this.isGuardDog = true;
             this.aggressiveness = 7;
         }
 
