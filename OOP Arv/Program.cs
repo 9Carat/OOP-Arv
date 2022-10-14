@@ -7,7 +7,7 @@
             Alligator alligator1 = new Alligator("Federico", 4, "yellow", 20, "Big", "Angry", 80);
             Cat cat1 = new Cat("Luna", 4, "Blue", 8, "Small", "Shy", "Shorthair");
             Rottweiler rottweiler1 = new Rottweiler("Max", 4, "Brown", 7, "Bulky", "Obedient", true, 8, 2);
-            GoldenRetriever goldenRetriever1 = new GoldenRetriever("Bentley", 4, "Blue", 11, "Average", "Friendly", false, 2, true);
+            GoldenRetriever goldenRetriever1 = new GoldenRetriever();
 
             alligator1.MakeSound();
             alligator1.Action();

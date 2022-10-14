@@ -40,9 +40,10 @@ namespace OOP_Arv
 
         public override void GuardHouse()
         {
+            
             int chanceOfSuccess;
 
-            if (isGuardDog == true && aggressiveness > 5)
+            if (isGuardDog == true && aggressiveness > 5) // Chance of different scenarios depending on aggressiveness and whether or not the dog is a guarddog
             {
                 Random rnd = new Random();
                 chanceOfSuccess = rnd.Next(1, 41); // chance of success 75 %
@@ -67,7 +68,7 @@ namespace OOP_Arv
             {
                 Console.WriteLine("You tell " + name + " to guard your house against intruders");
                 Console.WriteLine("During the following night, a couple of burglars tries to break into your house...");
-                Console.WriteLine("The burglary attempt was unsuccesful as your dog, " + name + ", managed to scare the burglars away!");
+                Console.WriteLine("The burglary attempt was unsuccessful as your dog, " + name + ", managed to scare the burglars away!");
             }
             else
             {
