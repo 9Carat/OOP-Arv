@@ -29,6 +29,7 @@ namespace OOP_Arv
         public GoldenRetriever()
         {
             this.aggressiveness = 3;
+            this.adopted = true;
         }
 
         public override void MakeSound()

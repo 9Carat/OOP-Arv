@@ -31,6 +31,7 @@ namespace OOP_Arv
         public Rottweiler()
         {
             this.aggressiveness = 7;
+            this.hunger = 4;
         }
 
         public override void MakeSound()
